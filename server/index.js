@@ -7,14 +7,15 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+require('dotenv').config(); // Load variables from .env file
+
 // DATABASE CONNECTION
 const db = mysql.createConnection({
-    host: ' sql12.freesqldatabase.com',
-    user: 'sql12809473',      // Your MySQL username
-    password: ' ecBbYFwu5t', // Your MySQL password
-    database: 'sql12809473'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
-
 db.connect(err => {
     if (err) console.log('DB Connection Error:', err);
     else console.log('Connected to MySQL Database');
