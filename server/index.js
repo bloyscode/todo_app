@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 
 // DATABASE CONNECTION
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',      // Your MySQL username
-    password: 'bloyskie28', // Your MySQL password
-    database: 'todo_app'
+    host: ' sql12.freesqldatabase.com',
+    user: 'sql12809473',      // Your MySQL username
+    password: ' ecBbYFwu5t', // Your MySQL password
+    database: 'sql12809473'
 });
 
 db.connect(err => {
